@@ -47,7 +47,7 @@ local function wrapper()
         -- open term only if its window isnt opened
         if not vim.tbl_contains(api.nvim_list_wins(), vim.fn.bufwinid(entry.bufnr)) then
           local termopts = vim.g.nvchad_terms[tostring(entry.bufnr)]
-          require("nvchad.term").toggle(termopts)
+          require("minh_ui.term").toggle(termopts)
         end
       end)
       return true
@@ -57,6 +57,8 @@ local function wrapper()
   picker:find()
 end
 
+wrapper()
+
 return require("telescope").register_extension {
-  exports = { terms = wrapper },
+  exports = { new_terms = wrapper },
 }
