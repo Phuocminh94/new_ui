@@ -59,5 +59,5 @@ local function wrapper()
 end
 
 return require("telescope").register_extension {
-  exports = { terms = wrapper },
+  exports = { mterms = wrapper },
 }
