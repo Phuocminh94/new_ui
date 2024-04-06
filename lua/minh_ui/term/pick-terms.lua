@@ -1,3 +1,4 @@
+
 -- Credits to telescope buffer builtin, some code taken from it
 -- Src: https://github.com/nvim-telescope/telescope.nvim/blob/master/lua/telescope/builtin/internal.lua
 
@@ -60,5 +61,5 @@ end
 wrapper()
 
 return require("telescope").register_extension {
-  exports = { new_terms = wrapper },
+  exports = { mterms = wrapper },
 }
