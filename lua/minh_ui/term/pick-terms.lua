@@ -58,8 +58,6 @@ local function wrapper()
   picker:find()
 end
 
-wrapper()
-
 return require("telescope").register_extension {
-  exports = { mterms = wrapper },
+  exports = { terms = wrapper },
 }
