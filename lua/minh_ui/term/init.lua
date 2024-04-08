@@ -135,7 +135,7 @@ M.runner = function(opts)
     local cmd = format_cmd(opts.cmd)
 
     if x.buf == api.nvim_get_current_buf() then
-      set_buf(g.buf_history[#g.buf_history -1])
+      -- set_buf(g.buf_history[#g.buf_history -1])
       cmd = format_cmd(opts.cmd)
       set_buf(x.buf)
     end
